@@ -76,9 +76,11 @@ function pageStudy(req, res) {
 function pageGiveClasses(req, res) {
     const data = req.query
 
-    const isEmpty = Object.keys(data).length > 0
+    const isNotEmpty = Object.keys(data).length > 0
     if (isNotEmpty) {
+
         data.subject = getSubject(data.subject)
+
         proffys.push(data)
 
         return res.redirect("/study")
