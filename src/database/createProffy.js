@@ -7,10 +7,10 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
             whatsapp,
             bio
         ) VALUES (
-            ${proffyValue.name},
-            ${proffyValue.avatar},
-            ${proffyValue.whatsapp},
-            ${proffyValue.bio}
+            "${proffyValue.name}",
+            "${proffyValue.avatar}",
+            "${proffyValue.whatsapp}",
+            "${proffyValue.bio}"
         );
     `)
 
@@ -22,9 +22,9 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
                 cost,
                 proffy_id
             ) VALUES (
-                ${classValue.subject},
-                ${classValue.cost},
-                ${proffy_id}
+                "${classValue.subject}",
+                "${classValue.cost}",
+                "${proffy_id}"
             );
     `)
 
@@ -38,13 +38,13 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
                 time_from,
                 time_to
             ) VALUES (
-                ${class_id},
-                ${classScheduleValue.weekday},
-                ${classScheduleValue.time_from},
-                ${classScheduleValue.time_to},
+                "${class_id}",
+                "${classScheduleValue.weekday}",
+                "${classScheduleValue.time_from}",
+                "${classScheduleValue.time_to}"
             );
         `)
     })
 
-    await // 01:04    
+    await Promise.all(insertedAllClassScheduleValues)
 }
