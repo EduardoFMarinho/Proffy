@@ -6,7 +6,7 @@ function pageLanding(req, res) {
     return res.render("index.html")
 }
 
-function pageStudy(req, res) {
+async function pageStudy(req, res) {
     const filters = req.query
 
     if (!filters.subject || !filters.weekday || !filters.time) {
@@ -28,14 +28,25 @@ function pageStudy(req, res) {
             AND class_schedule.weekday = ${filters.weekday}
             AND class_schedule.time_from <= ${timeToMinutes}
             AND class_schedule.time_to > ${timeToMinutes}
-
         )
+        AND classes.subject = '${filters.subject}'
     `
+
+    try {
+        const db = await Database
+        const proffys = await db.all(query)
+
+        return res.render('study.html', { proffys, subjects, filters, weekdays })
+
+
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
 function pageGiveClasses(req, res) {
-    const data = req.query
+    const data = req.body
 
     const isNotEmpty = Object.keys(data).length > 0
     if (isNotEmpty) {
@@ -51,10 +62,15 @@ function pageGiveClasses(req, res) {
     return res.render("give-classes.html", {subjects, weekdays})
 }
 
+function saveClasses(req, res) {
+
+}
+
 module.exports = {
     pageLanding,
     pageStudy,
-    pageGiveClasses
+    pageGiveClasses, 
+    saveClasses
 }
 
-// 02:03
+// 02:19
