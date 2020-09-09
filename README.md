@@ -7,6 +7,11 @@ The customer can login and filter the list of private teachers, and the same wil
 
 In order to open and edit this website, you need to have a Code Editor installed in your PC. Once that is done, download the file and open it in your editor. If you have Visual Code Studio, you can right click the file and select the "Open with Code" option.
 
-# Features in development
+# Features 
 
-- Connection to DataBase
+- User can sign in as a Teacher
+- Teachers can write informations regarding their contact number, type of class/subject, personal bio, and how much they charge per hour. 
+- Teachers will be listed in a page with a filter
+- WhatsApp's API will be use for the contact number. Meaning that people can text you via WhatsApp right away just by clicking the contact button
+
+
