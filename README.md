@@ -14,4 +14,14 @@ In order to open and edit this website, you need to have a Code Editor installed
 - Teachers will be listed in a page with a filter
 - WhatsApp's API will be use for the contact number. Meaning that people can text you via WhatsApp right away just by clicking the contact button
 
+# How to run
+
+
+In order to run your project, you'll need Git Bash and Node JS. After that, follow the steps below:
+
+$ cd src/server.js
+$ npm install
+$ npm run dev
+
+You can access the project in http://localhost:5500 or in http://127.0.0.1:5500/
 
