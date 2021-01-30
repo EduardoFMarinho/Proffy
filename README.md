@@ -19,7 +19,6 @@ In order to open and edit this website, you need to have a Code Editor installed
 
 In order to run your project, you'll need Git Bash and Node JS. After that, follow the steps below:
 
-$ cd src/server.js
 $ npm install
 $ npm run dev
 
