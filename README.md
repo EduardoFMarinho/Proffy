@@ -17,10 +17,13 @@ In order to open and edit this website, you need to have a Code Editor installed
 # How to run
 
 
-In order to run your project, you'll need Git Bash and Node JS. After that, follow the steps below:
+In order to run your project, you'll need Git Bash and Node JS (version 12.14.0 was used during the development and final testing). After that, follow the steps below:
 
 $ npm install
 $ npm run dev
 
 You can access the project in http://localhost:5500 or in http://127.0.0.1:5500/
 
+# Gallery 
+
+![Alt text](https://imgur.com/xKCSv7y)
