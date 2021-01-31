@@ -27,3 +27,11 @@ You can access the project in http://localhost:5500 or in http://127.0.0.1:5500/
 # Gallery 
 
 ![Alt text](https://i.imgur.com/xKCSv7y.png)
+
+![Alt text](https://i.imgur.com/vQWaNkm.png)
+
+![Alt text](https://i.imgur.com/bjXAggD.png)
+
+![Alt text](https://i.imgur.com/iIowkC4.png)
+
+![Alt text](https://i.imgur.com/LpTN7qP.png)
